@@ -3,6 +3,7 @@
     // Run button configuration
     "commands": {
         "Run Node": "node {{filepath}}"
+        "Node version:": "npm init -y"
     },
     // Preview button configuration
     "preview": {
