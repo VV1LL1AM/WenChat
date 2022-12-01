@@ -8,7 +8,8 @@
     // Preview button configuration
     "preview": {
         "Preview Website (static)": "https://{{domain}}/{{index}}",
-        "Preview Current File (static)": "https://{{domain}}/{{filepath}}"
+        "Preview Current File (static)": "https://{{domain}}/{{filepath}}",
+        "Box URL": "http://{{domain5000}}/"
     },
     // Debugger target button configuration
     "debugger": [{"type":"NODEJS","command":"{{filepath}}","before":"","uuid":"20d5151f-c12d-d9a5-b1d6-e3832248ed81","name":"Debug Current NodeJS File"}]
