@@ -20,6 +20,8 @@ const newUserConnected = function (data) {
     socket.emit("new user", userName);
     //call
     addToUsersBox(userName);
+
+    //chat application will inform users when a user exits a chat 
 };
 
 const addToUsersBox = function (userName) {
@@ -40,6 +42,10 @@ const addToUsersBox = function (userName) {
   `;
     //set the inboxPeople div with the value of userbox
     inboxPeople.innerHTML += userBox;
+
+    //chat application will inform users when a user exits a chat 
+    messageBox.innerHTML += userName + " has entered the chat";
+
 };
 
 //call 
@@ -55,6 +61,10 @@ socket.on("new user", function (data) {
 //when a user leaves
 socket.on("user disconnected", function (userName) {
   document.querySelector(`.${userName}-userlist`).remove();
+
+  //provide a notification to existing users when a new users’joins
+  
+  messageBox.innerHTML += userName + " has left the chat";
 });
 
 
@@ -69,21 +79,23 @@ const addNewMessage = ({ user, message }) => {
   const receivedMsg = `
   <div class="incoming__message">
     <div class="received__message">
-      <p>${message}</p>
       <div class="message__info">
         <span class="message__author">${user}</span>
         <span class="time_date">${formattedTime}</span>
       </div>
+      <p>${message}</p>
+
     </div>
   </div>`;
 
   const myMsg = `
   <div class="outgoing__message">
     <div class="sent__message">
-      <p>${message}</p>
       <div class="message__info">
+        <span> Me </span>
         <span class="time_date">${formattedTime}</span>
       </div>
+      <p>${message}</p>
     </div>
   </div>`;
 

@@ -46,17 +46,20 @@
   
   /* Style the content */
   .content {
-    margin-left: 200px;
-    padding-left: 20px;
+    height: 500px;
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    margin-right: 200px;
+    padding-right: 20px;
     color: orange;
+
   }
-
-
 
 
 .container-fluid{
      size: 100% 100%;
-     background-color: rgb(53, 53, 102);
+     background-color: rgb(66, 81, 82);
      padding-bottom: 0rem;
 }
 
@@ -81,11 +84,12 @@
 }
 
 #top{
-    padding: 14rem;
-    border: 1px solid white;
+
+    padding: 8rem;
+    border: 1px solid black;
     color: white;
-    background: url("_resources_/banner.jpg") no-repeat;
-    background-size: 100% 100%;
+    background: url("ca4/public/background.jpg") no-repeat;
+    background-size: 10% 10%;   
 }
 
 #banner{
@@ -115,9 +119,9 @@
 
 
 
-#H1, #H2, #H3{
+#H1,#H2{
 
-    margin-top: 15%;
+    margin-top: 3%;
     padding: 1rem;
     max-width: 100%;
     border: 3px solid white;
@@ -127,26 +131,12 @@
 }
 
 
-footer {
-    padding: auto;
-    background-color: black;
-    border: 2px solid white;
-    height: ;
-}
-
 footer{
    background-color: #003366;
    color: white;
    position: absolute;
    bottom: 5;
    width:100%;
-
-#background_img{
-
-    background:url('_resources_/background.jpg') no-repeat; 
-    background-size: 100% 100%;
-    background-attachment: fixed;
-    
 }
 
 h4{
@@ -157,10 +147,11 @@ li{
     padding: 10px;
 }
 
-tabs{
+.tabs{
     background-color: rgb(175, 130, 45);
 }
 
-#scroll_text_inp{
-    padding: 50%;
+
+#inbox_chat{
+    padding-bottom: 15rem;
 }

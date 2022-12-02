@@ -11,31 +11,31 @@
   </head>
  <body>
 
-      <div class ="tabs" >
+      <div class ="tabs">
               <ul class="nav nav-tabs justify-content-center">
-                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="chat.html">Chat</a></li>
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link active" href="chat.html">Chat</a></li>
                 <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
               </ul>
       </div>
   
 
-    <div class="container-fluid">
+    <div class="container-fluid d-flex h-100 flex-column">
 
-      <div class="row">
-        <div class="nav flex-column" id="sidenav">
-            <div class="inbox__people">
-                <h4>Active users</h4>
-            </div>
+      <div class="row" id="inbox_chat">
 
-        </div>
-          
-      </div>  
+        <div class="col-lg-4 col-md-9 col-sm-12">
+          <div class="nav flex-column" id="sidenav">
+              <div class="inbox__people">
+                  <h4>Active users</h4>
+              </div>
+
+          </div>
+        </div> 
 
           <br>
           <hr>
 
-      <div class="row">
           <div class="col-lg-4 col-md-9 col-sm-12">
             <div class="content">
               <div class="messages__history"></div>
