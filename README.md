@@ -1,27 +1,33 @@
-# Creating NodeJS and/or Web programs in Codio
 
-### Make a new file
-Use **File > New File...** or right-click in the file tree to create a new file. You can right-click in the file tree to rename or delete files.
+__Completeness_& Challenges__
 
-As Codio detects which file is in focus, simply put your cursor into whichever code editor you want to preview and use the "Preview Current File".
 
-### View site or Current file
-Use the Preview button (with the "play" icon) to see a preview of the website.
+I have successfully completed the following requirement:
 
-![](https://global.codio.com/platform/readme.resources/PreviewMenuWeb.png)
+1-The chat application will provide a notification to existing users when a new users joins
+2-The chat application will show a list of users currently within a chat
+3-The chat application will inform users when a new user joins a chat 
+4-The chat application will inform users when a user exits a chat
 
-Use the drop-down arrow to the right of the "Preview Website" option to change the button to view the current file. You can also configure your preview button to open the preview as a new tab inside Codio, or as a new tab in your browser.
+I have completed every aspect requirement of the website except informing the users where someone else is
+typing. This relates to some of the challenged I faced implementing the website: Lack of time and knowledge.
 
-### Running Node
-Use the Run button (with the "rocketship" icon) to start the current NodeJS file. To stop node, press ctrl + c in the terminal.
+To achieve the mentioned features of the chat, I have made use of html forms  for my input box along with CSS to
+provide styling to it. I have used javascript functions to randomly assign usernames to people in the chat and add them to a list.
 
-### Debug your Code
-Use the "Debug Current NodeJS File" on the far right of the top menu bar to launch the debugger targeting the NodeJS file your cursor is in.
+The communication between server and users is done peer to peer. I implemented so the chat's server are the user themselves and 
+any changes are instantly drawn into the screen of all users simultaneously.
 
-Use your browser's built in Developer Tools to debug other web projects such as HTML/CSS.
+As mentioned above time and lack of knowledge were the biggest challenges I faced in the making of the website,
+I found myself restricted on what I could do with any idea I came up with. For example, I was not able to set different 
+text colours to the reports announcing the users exit(red) and entrance(green) to chat.
+Using bootstrap alongside CSS was another big challenge one example is redundancy in my code due to applying 
+style to bootstrap widgets.
 
-### Reconfigure your Panels for easier development
-Use the **View > Panels** menu on the top tool bar to segment your screen.
 
-Simply drag the tab of the file or terminal (the part with the name) you want to move into the new panel.
+__Design__
 
+I have chosen I simple design consisting of one bootstrap coiner for each page, rows and column tags.
+I chose a different range of colours to distinguish different section and content of the website hence easier for the users
+to navigate it, however I kept the colours not so much different in the spectrum to preserve the simplified modelled that I planned which 
+otherwise would be harder to navigate and very uncomfortable for users to access the content.

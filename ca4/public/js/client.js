@@ -1,3 +1,4 @@
+
 //required for front end communication between client and server
 
 const socket = io();
@@ -43,9 +44,6 @@ const addToUsersBox = function (userName) {
     //set the inboxPeople div with the value of userbox
     inboxPeople.innerHTML += userBox;
 
-    //chat application will inform users when a user exits a chat 
-    messageBox.innerHTML += userName + " has entered the chat";
-
 };
 
 //call 
@@ -53,6 +51,9 @@ newUserConnected();
 
 //when a new user event is detected
 socket.on("new user", function (data) {
+
+  //provide a notification to existing users when a new users’joins
+  messageBox.innerHTML += userName + " has entered the chat"+`<br>`;
   data.map(function (user) {
           return addToUsersBox(user);
       });
@@ -60,11 +61,13 @@ socket.on("new user", function (data) {
 
 //when a user leaves
 socket.on("user disconnected", function (userName) {
+
+//provide a notification to existing users when a new users’joins
+  messageBox.innerHTML += userName + " has left the chat"+`<br>`;
+
+  //Remove user from the list of active users
   document.querySelector(`.${userName}-userlist`).remove();
 
-  //provide a notification to existing users when a new users’joins
-  
-  messageBox.innerHTML += userName + " has left the chat";
 });
 
 
@@ -99,8 +102,24 @@ const addNewMessage = ({ user, message }) => {
     </div>
   </div>`;
 
+
+const istyping = `
+  <div class="incoming__message">
+    <div class="received__message">
+      <div class="message__info">
+        <span class="message__author">${user}</span>
+        <p>is typing</p>
+      </div>
+      
+    </div>
+  </div>`;
+
+
   //is the message sent or received
+
   messageBox.innerHTML += user === userName ? myMsg : receivedMsg;
+  
+
 };
 
 messageForm.addEventListener("submit", (e) => {
@@ -120,3 +139,15 @@ messageForm.addEventListener("submit", (e) => {
 socket.on("chat message", function (data) {
   addNewMessage({ user: data.nick, message: data.message });
 });
+
+
+
+if ($("message_form").data("changed")) {
+   document.getElementById("typing_status").innerHTML = userName + "is ityping"
+}
+
+
+  
+    
+
+

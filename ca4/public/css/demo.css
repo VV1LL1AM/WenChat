@@ -56,14 +56,13 @@
 
   }
 
-
+ /* Style the container */
 .container-fluid{
-     size: 100% 100%;
      background-color: rgb(66, 81, 82);
      padding-bottom: 0rem;
 }
 
-
+/* Style the first coloum in the cointainer in the "About" page */
 #descriptive_col{
     padding: 1rem;
     width: 58%;
@@ -73,7 +72,7 @@
     color: white;  
 }
 
-
+/* Style the second coloum in the cointainer in the "About" page */
 #exp_col{
     padding: 1rem;
     width: 42%;
@@ -83,30 +82,15 @@
     color: white;    
 }
 
-#top{
 
-    padding: 8rem;
+/* Backgound image settingss in the Home page */
+#Top{
+    padding: 4rem;
     border: 1px solid black;
-    color: white;
-    background: url("ca4/public/background.jpg") no-repeat;
-    background-size: 10% 10%;   
+    background: url("background.jpg") no-repeat;
+    background-size: 100% 100%;   
 }
 
-#banner{
-    padding: 1rem;
-    border: 6px solid green;
-    font-family: cursive;
-    width: fit-content;
-    height: fit-content;
-}
-
-#map_col{
-    padding: 1rem;
-    width: 70%;
-    border: 6px solid white;
-    background-color: #003366;
-    color: white;
-}
 
 #info{
     padding: 1rem;
@@ -151,7 +135,7 @@ li{
     background-color: rgb(175, 130, 45);
 }
 
-
+/* Style the box for input */
 #inbox_chat{
     padding-bottom: 15rem;
 }
